@@ -1,39 +1,3 @@
-/*
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
-*/
-
-import { useState } from "react";
-import { HiGlobeAlt, HiOutlineFolder, HiOutlineServer } from "react-icons/hi";
-import {
-    HiCog6Tooth,
-    HiOutlineChartBarSquare,
-    HiSignal,
-} from "react-icons/hi2";
-
-const navigation = [
-    { name: "Projects", href: "#", icon: HiOutlineFolder, current: false },
-    { name: "Deployments", href: "#", icon: HiOutlineServer, current: false },
-    { name: "Activity", href: "#", icon: HiSignal, current: false },
-    { name: "Domains", href: "#", icon: HiGlobeAlt, current: false },
-    { name: "Usage", href: "#", icon: HiOutlineChartBarSquare, current: false },
-    { name: "Settings", href: "#", icon: HiCog6Tooth, current: true },
-];
-const teams = [
-    { id: 1, name: "Planetaria", href: "#", initial: "P", current: false },
-    { id: 2, name: "Protocol", href: "#", initial: "P", current: false },
-    { id: 3, name: "Tailwind Labs", href: "#", initial: "T", current: false },
-];
 const secondaryNavigation = [
     { name: "Account", href: "#", current: true },
     { name: "Notifications", href: "#", current: false },
@@ -42,13 +6,7 @@ const secondaryNavigation = [
     { name: "Integrations", href: "#", current: false },
 ];
 
-function classNames(...classes) {
-    return classes.filter(Boolean).join(" ");
-}
-
 export default function Settings() {
-    const [sidebarOpen, setSidebarOpen] = useState(false);
-
     return (
         <>
             {/*
